@@ -1,0 +1,108 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- Desabilitar estilos struts2. -->
+	<constant name="struts.ui.theme" value="simple" />
+	
+	<!-- Configuration for the default package. -->
+	<package name="default" extends="struts-default">
+		<action name="">
+			<result>index.jsp</result>
+		</action>
+	</package>
+	<package name="usuario" extends="struts-default">
+		<action name="nuevoUsuario" class="controlador.UsuarioActionSupport" method="nuevoUsuario">
+			<result name="success">index.jsp</result>
+			<result name="error">sign-up.jsp</result>
+		</action>
+		<action name="accesoUsuario" class="controlador.UsuarioActionSupport" method="accesoUsuario">
+			<result name="success">index.jsp</result>
+			<result name="error">log-in.jsp</result>
+		</action>
+		<action name="cerrarSesionUsuario" class="controlador.UsuarioActionSupport" method="cerrarSesionUsuario">
+			<result name="success">index.jsp</result>
+		</action>
+		<action name="editarUsuario" class="controlador.UsuarioActionSupport" method="editarUsuario">
+			<result name="success">profile.jsp</result>
+			<result name="error">profile.jsp</result>
+		</action>
+		<action name="cambiarClave" class="controlador.UsuarioActionSupport" method="cambiarClave">
+			<result name="success">profile.jsp</result>
+			<result name="error">profile.jsp</result>
+		</action>
+		<action name="borrarUsuario" class="controlador.UsuarioActionSupport" method="borrarUsuario">
+			<result name="success">index.jsp</result>
+			<result name="error">profile.jsp</result>
+		</action>
+	</package>
+	<package name="evento" extends="struts-default">
+		<action name="nuevoEvento" class="controlador.EventoActionSupport" method="nuevoEvento">
+			<result name="success">index.jsp</result>
+		</action>
+		<action name="buscarEvento" class="controlador.EventoActionSupport" method="buscarEvento">
+			<result name="success">find-result.jsp</result>
+		</action>
+		<action name="cargarEventos" class="controlador.EventoActionSupport" method="cargarEventos">
+			<result name="success">events.jsp</result>
+		</action>
+		<action name="nuevoBloqueo" class="controlador.EventoActionSupport" method="nuevoBloqueo">
+			<result name="success">events.jsp</result>
+			<result name="error">events.jsp</result>
+		</action>
+		<action name="nuevaValoracion" class="controlador.EventoActionSupport" method="nuevaValoracion">
+			<result name="success">events.jsp</result>
+			<result name="error">events.jsp</result>
+		</action>
+		<action name="nuevoReporte" class="controlador.EventoActionSupport" method="nuevoReporte">
+			<result name="success">events.jsp</result>
+			<result name="error">events.jsp</result>
+		</action>
+	</package>
+	<package name="peticion" extends="struts-default">
+		<action name="enviarPeticion" class="controlador.PeticionActionSupport" method="enviarPeticion">
+			<result name="success">index.jsp</result>
+		</action>
+		<action name="cargarPeticiones" class="controlador.PeticionActionSupport" method="cargarPeticiones">
+			<result name="success">request.jsp</result>
+		</action>
+		<action name="aceptarPeticion" class="controlador.PeticionActionSupport" method="aceptarPeticion">
+			<result name="success">request.jsp</result>
+		</action>
+		<action name="rechazarPeticion" class="controlador.PeticionActionSupport" method="rechazarPeticion">
+			<result name="success">request.jsp</result>
+		</action>
+	</package>
+	<package name="bloqueo" extends="struts-default">
+		<action name="cargarBloqueos" class="controlador.BloqueoActionSupport" method="cargarBloqueos">
+			<result name="success">block.jsp</result>
+		</action>
+		<action name="eliminarBloqueo" class="controlador.BloqueoActionSupport" method="eliminarBloqueo">
+			<result name="success">block.jsp</result>
+		</action>
+	</package>
+	<package name="valoracion" extends="struts-default">
+		<action name="cargarValoraciones" class="controlador.ValoracionActionSupport" method="cargarValoraciones">
+			<result name="success">reviews.jsp</result>
+		</action>
+		<action name="eliminarValoracion" class="controlador.ValoracionActionSupport" method="eliminarValoracion">
+			<result name="success">reviews.jsp</result>
+		</action>
+		<action name="editarValoracion" class="controlador.ValoracionActionSupport" method="editarValoracion">
+			<result name="success">reviews.jsp</result>
+		</action>
+	</package>
+	<package name="reporte" extends="struts-default">
+		<action name="cargarReportes" class="controlador.ReporteActionSupport" method="cargarReportes">
+			<result name="success">report.jsp</result>
+		</action>
+		<action name="eliminarReporte" class="controlador.ReporteActionSupport" method="eliminarReporte">
+			<result name="success">report.jsp</result>
+		</action>
+		<action name="editarReporte" class="controlador.ReporteActionSupport" method="editarReporte">
+			<result name="success">report.jsp</result>
+		</action>
+	</package>
+
+</struts>

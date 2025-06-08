@@ -1,0 +1,103 @@
+/* GLOBAL */
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato';
+}
+
+.fix-navbar{
+    margin-top: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Catamaran';
+    font-weight: 800 !important;
+}
+
+.clickable:hover{
+    cursor: pointer;
+}
+
+.bg-black {
+    background-color: #000 !important;
+}
+
+.bg-one {
+    background: #000; /* Fondo negro */
+}
+
+.bg-two {
+    background: #ffbb11; /* Fondo amarillo */
+}
+
+.bg-three {
+    background: #775ada; /* Fondo morado */
+}
+
+.bg-four {
+    background: #44ccff; /* Fondo celeste */
+}
+
+.bg-five {
+    background: #00cc99; /* Fondo verde azulado */
+}
+
+.bg-six {
+    background-color: #fdfbfb; /* Fondo blanco */
+}
+
+
+
+/* INDEX (CAROUSEL CARDS) */
+
+.carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.card-template img{
+    width: 444px;
+}
+
+/* NAVBAR */
+
+  .navbar-custom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .navbar-custom .navbar-brand{
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+  }
+  
+  .navbar-custom .navbar-nav .nav-item .nav-link, .font-link {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+  }
+
+  .input-logout{
+    width: 100%;
+    padding: .25rem 1.5rem;
+    text-align: left;
+  }
+  .input-logout:hover{
+    text-decoration: none;
+  }
